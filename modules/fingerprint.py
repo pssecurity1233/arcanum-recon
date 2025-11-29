@@ -1,52 +1,42 @@
-# modules/fingerprint.py
 import requests
 
 def detect_framework(body):
     b = body.lower()
-    if "__next_data__" in b or "nextjs" in b:
-        return "Next.js"
-    if "react" in b and "react-dom" in b:
-        return "React"
-    if "angular" in b:
-        return "Angular"
-    if "vue" in b:
-        return "Vue.js"
-    if "svelte" in b:
-        return "Svelte"
+    if "react" in b: return "React"
+    if "__next_data__" in b: return "Next.js"
+    if "angular" in b: return "Angular"
+    if "vue" in b: return "Vue.js"
     return "Unknown"
 
 def detect_waf(headers):
-    header_string = " ".join([f"{k}:{v}" for k, v in headers.items()]).lower()
-    waf_signatures = {
-        "cloudflare": "Cloudflare",
-        "akamai": "Akamai",
-        "incapsula": "Imperva Incapsula",
-        "sucuri": "Sucuri",
-        "barracuda": "Barracuda"
-    }
-    for key, name in waf_signatures.items():
-        if key in header_string:
-            return name
+    h = " ".join([f"{k}:{v}".lower() for k,v in headers.items()])
+    if "cloudflare" in h: return "Cloudflare"
+    if "akamai" in h: return "Akamai"
+    if "incapsula" in h: return "Imperva Incapsula"
     return "None Detected"
 
 def fingerprint(url):
     try:
-        r = requests.get(url, timeout=8)
-        body = r.text or ""
-        headers = r.headers or {}
+        r = requests.get(url, timeout=3)
+        body = r.text
+        headers = r.headers
+        
         missing = []
-        for h in ["X-Frame-Options", "Content-Security-Policy", "Strict-Transport-Security", "X-XSS-Protection"]:
+        for h in ["Content-Security-Policy", "X-Frame-Options", "Strict-Transport-Security"]:
             if h not in headers:
                 missing.append(h)
+
         return {
-            "url": url,
             "server": headers.get("Server", "Unknown"),
             "powered_by": headers.get("X-Powered-By", "Unknown"),
             "framework": detect_framework(body),
             "waf": detect_waf(headers),
-            "cookies": dict(r.cookies),
-            "content_type": headers.get("Content-Type", "Unknown"),
             "missing_security_headers": missing
         }
-    except Exception:
-        return {}
+    except:
+        return {
+            "server": "Unknown",
+            "framework": "Unknown",
+            "waf": "Unknown",
+            "missing_security_headers": []
+        }

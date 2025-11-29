@@ -2,17 +2,12 @@ import requests
 
 def crtsh_enum(domain):
     url = f"https://crt.sh/?q={domain}&output=json"
-    subs = set()
-
     try:
-        r = requests.get(url, timeout=10)
+        r = requests.get(url, timeout=5)
         if r.status_code != 200:
             return []
         data = r.json()
-        for entry in data:
-            name = entry["name_value"].replace("*.", "")
-            subs.add(name)
-    except Exception:
-        pass
-
-    return list(subs)
+        subs = list(set([d["name_value"].replace("*.", "") for d in data]))
+        return subs
+    except:
+        return []

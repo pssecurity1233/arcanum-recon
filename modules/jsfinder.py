@@ -3,46 +3,38 @@ import requests
 from urllib.parse import urljoin
 
 def detect_cloud_assets(text):
-    findings = []
-
+    leaks = []
     patterns = {
-        "AWS S3": r"https:\/\/[a-zA-Z0-9\.\-_]+\.s3\.amazonaws\.com",
-        "GCP Storage": r"https:\/\/storage\.googleapis\.com\/[a-zA-Z0-9\.\-_]+",
-        "Azure Blob": r"https:\/\/[a-zA-Z0-9\-_]+\.blob\.core\.windows\.net\/",
-        "Firebase": r"https:\/\/[a-zA-Z0-9\-_]+\.firebaseio\.com"
+        "AWS S3": r"https:\/\/[a-zA-Z0-9\._-]+\.s3\.amazonaws\.com\/?[^\s\"']*",
+        "GCP Storage": r"https:\/\/storage\.googleapis\.com\/[^\s\"']*",
+        "Azure Blob": r"https:\/\/[a-zA-Z0-9_-]+\.blob\.core\.windows\.net\/[^\s\"']*"
     }
-
-    for cloud, pattern in patterns.items():
-        found = re.findall(pattern, text)
+    for cloud, pat in patterns.items():
+        found = re.findall(pat, text)
         if found:
-            findings.append({cloud: found})
-
-    return findings
+            leaks.append({cloud: found})
+    return leaks
 
 def get_js_files(url):
     try:
-        r = requests.get(url, timeout=6)
-        scripts = re.findall(r'<script[^>]+src="(.*?)"', r.text)
-        return [urljoin(url, s) for s in scripts]
+        r = requests.get(url, timeout=3)
+        scripts = re.findall(r'src=["\'](.*?)["\']', r.text)
+        return [urljoin(url, s) for s in scripts if s.endswith(".js")]
     except:
         return []
 
-def extract_endpoints(js_code):
-    regex = r"(\/[a-zA-Z0-9_\-\/]+(?:\?[a-zA-Z0-9=&_\-]*)?)"
-    return list(set(re.findall(regex, js_code)))
+def extract_endpoints(code):
+    return list(set(re.findall(r"(\/[a-zA-Z0-9_\-\/]+)", code)))
 
 def analyze_js(js_files):
-    all_endpoints = []
-    cloud_leaks = []
-
+    endpoints = []
+    cloud = []
     for js in js_files:
         try:
-            code = requests.get(js, timeout=6).text
-            all_endpoints.extend(extract_endpoints(code))
-
-            cloud_leaks.extend(detect_cloud_assets(code))
-
+            r = requests.get(js, timeout=3)
+            code = r.text
+            endpoints.extend(extract_endpoints(code))
+            cloud.extend(detect_cloud_assets(code))
         except:
             pass
-
-    return list(set(all_endpoints)), cloud_leaks
+    return list(set(endpoints)), cloud

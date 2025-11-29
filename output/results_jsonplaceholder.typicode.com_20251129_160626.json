@@ -1,0 +1,195 @@
+{
+  "domain": "jsonplaceholder.typicode.com",
+  "root_url": "https://jsonplaceholder.typicode.com",
+  "started": "2025-11-29T16:06:01.018707Z",
+  "fingerprint": {
+    "server": "cloudflare",
+    "powered_by": "Express",
+    "content_type": "text/html; charset=UTF-8",
+    "cookies": {},
+    "missing_security_headers": [
+      "Content-Security-Policy",
+      "X-Frame-Options",
+      "Strict-Transport-Security",
+      "X-XSS-Protection"
+    ],
+    "technologies": [
+      "Cloudflare",
+      "Express",
+      "React",
+      "Vue.js"
+    ]
+  },
+  "subdomains": [
+    "jsonplaceholder.typicode.com"
+  ],
+  "js_files": [
+    "https://www.googletagmanager.com/gtag/js?id=G-E3C3GCQVBN",
+    "https://media.ethicalads.io/media/client/ethicalads.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+  ],
+  "endpoints": [
+    "/-/g",
+    "//ad",
+    "//ade",
+    "//adservice",
+    "//assets",
+    "//cct",
+    "//ethical-ad-client",
+    "//google",
+    "//googleads",
+    "//media",
+    "//pagead2",
+    "//server",
+    "//stats",
+    "//www",
+    "/100",
+    "/13687728",
+    "/1E3",
+    "/60/1E3",
+    "/E5iDgmz0hUgrfnEd",
+    "/KBs5EXKhPm1pG",
+    "/Mobile",
+    "/NaN",
+    "/_/g",
+    "/_/service_worker",
+    "/__/g",
+    "/abp/px",
+    "/activity",
+    "/activityi",
+    "/ads/ga-audiences",
+    "/ag/g/c",
+    "/api/v1/decision/",
+    "/as",
+    "/as/d/ccm/conversion",
+    "/ccm/collect",
+    "/ccm/conversion",
+    "/ccm/form-data",
+    "/ccm/geo",
+    "/cmMbLARIdAKsXoKsOL5XCrWPELv9LztX6ZbgOacu44pWSCg8aAuXL",
+    "/d/ccm/form-data",
+    "/d/pagead/form-data",
+    "/ddm/activity/",
+    "/debug/bootstrap",
+    "/debug/bootstrap?id=",
+    "/div",
+    "/en/latest/",
+    "/fNsaTGX/34ORpRRsXWRPXN1GdIRSurryyAYe2MXV18tM9He0",
+    "/g/collect",
+    "/g/d/ccm/conversion",
+    "/g/measurement/conversion",
+    "/g/s/collect",
+    "/ga/g/c",
+    "/gs",
+    "/gs/ccm/collect",
+    "/gs/ccm/conversion",
+    "/gs/measurement/conversion",
+    "/gs/pagead/conversion",
+    "/gtag",
+    "/gtag/destination",
+    "/gtag/js",
+    "/gtm",
+    "/iframe_api",
+    "/javascript",
+    "/json",
+    "/license",
+    "/mc/collect",
+    "/measurement/conversion",
+    "/pagead/1p-conversion",
+    "/pagead/conversion",
+    "/pagead/form-data",
+    "/pagead/gen_204",
+    "/pagead/regclk",
+    "/pagead/set_partitioned_cookie",
+    "/pagead/set_partitioned_cookie?",
+    "/pagead/uconversion",
+    "/pagead/viewthroughconversion",
+    "/qWskIbo76IRomieBdo0GRbzVbsEOEU",
+    "/static/service_worker/",
+    "/support",
+    "/taggy/agent",
+    "/td?id=",
+    "/this",
+    "/travel/flights/click/conversion",
+    "/wp-content"
+  ],
+  "cloud_leaks": [],
+  "parameters": [
+    "id"
+  ],
+  "risky_parameters": [],
+  "directories": [],
+  "dns": {
+    "A": [
+      {
+        "name": "jsonplaceholder.typicode.com.",
+        "type": 1,
+        "TTL": 300,
+        "data": "104.21.59.19"
+      },
+      {
+        "name": "jsonplaceholder.typicode.com.",
+        "type": 1,
+        "TTL": 300,
+        "data": "172.67.167.151"
+      },
+      {
+        "name": "jsonplaceholder.typicode.com",
+        "type": 1,
+        "TTL": 284,
+        "data": "172.67.167.151"
+      },
+      {
+        "name": "jsonplaceholder.typicode.com",
+        "type": 1,
+        "TTL": 284,
+        "data": "104.21.59.19"
+      }
+    ],
+    "AAAA": [
+      {
+        "name": "jsonplaceholder.typicode.com.",
+        "type": 28,
+        "TTL": 300,
+        "data": "2606:4700:3030::6815:3b13"
+      },
+      {
+        "name": "jsonplaceholder.typicode.com.",
+        "type": 28,
+        "TTL": 300,
+        "data": "2606:4700:3031::ac43:a797"
+      },
+      {
+        "name": "jsonplaceholder.typicode.com",
+        "type": 28,
+        "TTL": 5,
+        "data": "2606:4700:3031::ac43:a797"
+      },
+      {
+        "name": "jsonplaceholder.typicode.com",
+        "type": 28,
+        "TTL": 5,
+        "data": "2606:4700:3030::6815:3b13"
+      }
+    ],
+    "CNAME": [],
+    "MX": [],
+    "TXT": []
+  },
+  "plugins": {},
+  "robots": {
+    "robots_txt": "# As a condition of accessing this website, you agree to abide by the following\n# content signals:\n\n# (a)  If a content-signal = yes, you may collect content for the corresponding\n#      use.\n# (b)  If a content-signal = no, you may not collect content for the\n#      corresponding use.\n# (c)  If the website operator does not include a content signal for a\n#      corresponding use, the website operator neither grants nor restricts\n#      permission via content signal with respect to the corresponding use.\n\n# The content signals and their meanings are:\n\n# search:   building a search index and providing search results (e.g., returning\n#           hyperlinks and short excerpts from your website's contents). Search does not\n#           include providing AI-generated search summaries.\n# ai-input: inputting content into one or more AI models (e.g., retrieval\n#           augmented generation, grounding, or other real-time taking of content for\n#           generative AI search answers).\n# ai-train: training or fine-tuning AI models.\n\n# ANY RESTRICTIONS EXPRESSED VIA CONTENT SIGNALS ARE EXPRESS RESERVATIONS OF\n# RIGHTS UNDER ARTICLE 4 OF THE EUROPEAN UNION DIRECTIVE 2019/790 ON COPYRIGHT\n# AND RELATED RIGHTS IN THE DIGITAL SINGLE MARKET.\n",
+    "disallow": [],
+    "sitemaps": []
+  },
+  "sitemap_urls": [],
+  "api_indicators": [],
+  "subdomain_fingerprints": {},
+  "risk_score": {
+    "score": 20,
+    "level": "LOW",
+    "reasons": [
+      "Missing security headers"
+    ]
+  }
+}

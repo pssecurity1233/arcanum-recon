@@ -1,0 +1,45 @@
+{
+    "domain": "jsonplaceholder.typicode.com",
+    "root_url": "https://jsonplaceholder.typicode.com",
+    "subdomains": [],
+    "fingerprint": {
+        "server": "cloudflare",
+        "powered_by": "Express",
+        "framework": "React",
+        "waf": "Cloudflare",
+        "missing_security_headers": [
+            "Content-Security-Policy",
+            "X-Frame-Options",
+            "Strict-Transport-Security"
+        ]
+    },
+    "js_files": [
+        "https://media.ethicalads.io/media/client/ethicalads.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+    ],
+    "endpoints": [
+        "/i",
+        "/m",
+        "/__",
+        "/__/g",
+        "/NaN",
+        "/0",
+        "//",
+        "/on",
+        "/g",
+        "/at",
+        "/--"
+    ],
+    "parameters": [],
+    "risky_parameters": [],
+    "cloud_leaks": [],
+    "directories": [],
+    "risk_score": {
+        "score": 15,
+        "level": "LOW",
+        "reasons": [
+            "Missing important security headers"
+        ]
+    },
+    "output_file": "output/results.json"
+}

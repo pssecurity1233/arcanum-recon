@@ -1,0 +1,85 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>ARF Pro Report - jsonplaceholder.typicode.com</title>
+<style>
+body{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;background:#0d0d12;color:#e6eef6;margin:0;padding:0}
+.header{background:linear-gradient(90deg,#0a84ff22,#28f0e422);padding:24px;text-align:center;border-bottom:1px solid #111}
+.container{max-width:1100px;margin:18px auto;padding:18px;background:#0f1720;border-radius:8px;box-shadow:0 6px 30px rgba(0,0,0,0.6)}
+h1{color:#28F0E4;margin:0 0 6px 0}
+.small{color:#9fb0c6;font-size:14px}
+.table{width:100%;border-collapse:collapse;margin-top:16px}
+.table th, .table td{padding:8px;border-bottom:1px solid #111;color:#cfe7f5}
+.table th{text-align:left;color:#28F0E4}
+.kv{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed #081722}
+.code{background:#071226;padding:8px;border-radius:6px;color:#9fd9ff;overflow:auto;font-family:monospace}
+.badge{display:inline-block;padding:4px 8px;border-radius:6px;background:#081426;color:#0af;font-weight:600;margin-right:6px}
+.section{margin-top:18px}
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>ARF Pro Report - jsonplaceholder.typicode.com</h1>
+    <div class="small">Generated: 2025-11-29T16:06:26.799306Z</div>
+  </div>
+  <div class="container">
+    <div class="section">
+      <div class="kv"><div><strong>Root URL</strong></div><div>https://jsonplaceholder.typicode.com</div></div>
+      <div class="kv"><div><strong>Risk Score</strong></div><div>20 (LOW)</div></div>
+      <div class="kv"><div><strong>Server</strong></div><div>cloudflare</div></div>
+      <div class="kv"><div><strong>Framework</strong></div><div>Cloudflare, Express, React, Vue.js</div></div>
+      <div class="kv"><div><strong>WAF</strong></div><div>Cloudflare</div></div>
+    </div>
+
+    <div class="section">
+      <h2>Findings</h2>
+      <table class="table">
+        <tr><th>Category</th><th>Count / Summary</th></tr>
+        <tr><td>Subdomains</td><td>1</td></tr>
+        <tr><td>JS Files</td><td>3</td></tr>
+        <tr><td>Endpoints</td><td>83</td></tr>
+        <tr><td>Cloud Leaks</td><td>0</td></tr>
+        <tr><td>Directories</td><td>0</td></tr>
+        <tr><td>Missing Security Headers</td><td>Content-Security-Policy, X-Frame-Options, Strict-Transport-Security, X-XSS-Protection</td></tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Endpoints Extracted</h2>
+      <div class="code">/-/g<br/>//ad<br/>//ade<br/>//adservice<br/>//assets<br/>//cct<br/>//ethical-ad-client<br/>//google<br/>//googleads<br/>//media<br/>//pagead2<br/>//server<br/>//stats<br/>//www<br/>/100<br/>/13687728<br/>/1E3<br/>/60/1E3<br/>/E5iDgmz0hUgrfnEd<br/>/KBs5EXKhPm1pG<br/>/Mobile<br/>/NaN<br/>/_/g<br/>/_/service_worker<br/>/__/g<br/>/abp/px<br/>/activity<br/>/activityi<br/>/ads/ga-audiences<br/>/ag/g/c<br/>/api/v1/decision/<br/>/as<br/>/as/d/ccm/conversion<br/>/ccm/collect<br/>/ccm/conversion<br/>/ccm/form-data<br/>/ccm/geo<br/>/cmMbLARIdAKsXoKsOL5XCrWPELv9LztX6ZbgOacu44pWSCg8aAuXL<br/>/d/ccm/form-data<br/>/d/pagead/form-data<br/>/ddm/activity/<br/>/debug/bootstrap<br/>/debug/bootstrap?id=<br/>/div<br/>/en/latest/<br/>/fNsaTGX/34ORpRRsXWRPXN1GdIRSurryyAYe2MXV18tM9He0<br/>/g/collect<br/>/g/d/ccm/conversion<br/>/g/measurement/conversion<br/>/g/s/collect<br/>/ga/g/c<br/>/gs<br/>/gs/ccm/collect<br/>/gs/ccm/conversion<br/>/gs/measurement/conversion<br/>/gs/pagead/conversion<br/>/gtag<br/>/gtag/destination<br/>/gtag/js<br/>/gtm<br/>/iframe_api<br/>/javascript<br/>/json<br/>/license<br/>/mc/collect<br/>/measurement/conversion<br/>/pagead/1p-conversion<br/>/pagead/conversion<br/>/pagead/form-data<br/>/pagead/gen_204<br/>/pagead/regclk<br/>/pagead/set_partitioned_cookie<br/>/pagead/set_partitioned_cookie?<br/>/pagead/uconversion<br/>/pagead/viewthroughconversion<br/>/qWskIbo76IRomieBdo0GRbzVbsEOEU<br/>/static/service_worker/<br/>/support<br/>/taggy/agent<br/>/td?id=<br/>/this<br/>/travel/flights/click/conversion<br/>/wp-content</div>
+    </div>
+
+    <div class="section">
+      <h2>JS Files</h2>
+      <div class="code">https://www.googletagmanager.com/gtag/js?id=G-E3C3GCQVBN<br/>https://media.ethicalads.io/media/client/ethicalads.min.js<br/>https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js</div>
+    </div>
+
+    <div class="section">
+      <h2>Subdomains</h2>
+      <div class="code">jsonplaceholder.typicode.com</div>
+    </div>
+
+    <div class="section">
+      <h2>Cloud Leaks</h2>
+      <div class="code">(none)</div>
+    </div>
+
+    <div class="section">
+      <h2>Directories Found</h2>
+      <div class="code">(none)</div>
+    </div>
+
+    <div class="section">
+      <h2>Passive DNS</h2>
+      <div class="code">{<br/>  "A": [<br/>    {<br/>      "name": "jsonplaceholder.typicode.com.",<br/>      "type": 1,<br/>      "TTL": 300,<br/>      "data": "104.21.59.19"<br/>    },<br/>    {<br/>      "name": "jsonplaceholder.typicode.com.",<br/>      "type": 1,<br/>      "TTL": 300,<br/>      "data": "172.67.167.151"<br/>    },<br/>    {<br/>      "name": "jsonplaceholder.typicode.com",<br/>      "type": 1,<br/>      "TTL": 284,<br/>      "data": "172.67.167.151"<br/>    },<br/>    {<br/>      "name": "jsonplaceholder.typicode.com",<br/>      "type": 1,<br/>      "TTL": 284,<br/>      "data": "104.21.59.19"<br/>    }<br/>  ],<br/>  "AAAA": [<br/>    {<br/>      "name": "jsonplaceholder.typicode.com.",<br/>      "type": 28,<br/>      "TTL": 300,<br/>      "data": "2606:4700:3030::6815:3b13"<br/>    },<br/>    {<br/>      "name": "jsonplaceholder.typicode.com.",<br/>      "type": 28,<br/>      "TTL": 300,<br/>      "data": "2606:4700:3031::ac43:a797"<br/>    },<br/>    {<br/>      "name": "jsonplaceholder.typicode.com",<br/>      "type": 28,<br/>      "TTL": 5,<br/>      "data": "2606:4700:3031::ac43:a797"<br/>    },<br/>    {<br/>      "name": "jsonplaceholder.typicode.com",<br/>      "type": 28,<br/>      "TTL": 5,<br/>      "data": "2606:4700:3030::6815:3b13"<br/>    }<br/>  ],<br/>  "CNAME": [],<br/>  "MX": [],<br/>  "TXT": []<br/>}</div>
+    </div>
+
+    <div class="section">
+      <h2>Notes</h2>
+      <div class="small">This report is generated by ARF Pro v2.0 (single-file). Use results only for authorized testing.</div>
+    </div>
+  </div>
+</body>
+</html>
